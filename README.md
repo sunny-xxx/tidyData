@@ -1,4 +1,4 @@
-# tidyData
+## Hi! Here is an explonation on what is going on while the script runs:
 
 At the beginning of script required packages should be initialized:
 

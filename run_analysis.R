@@ -9,13 +9,14 @@ train_x <- read.table("UCI HAR Dataset//train//X_train.txt")
 train_y <- read.table("UCI HAR Dataset//train/y_train.txt")
 train_s <- read.table("UCI HAR Dataset//train//subject_train.txt")
 
+act <- read.table("UCI HAR Dataset//activity_labels.txt")
+
 test_x <- bind_rows(test_x, train_x)
 test_y <- bind_rows(test_y, train_y)
 test_s <- bind_rows(test_s, train_s)
 
 rm("train_x", "train_y", "train_s")
 
-act <- read.table("UCI HAR Dataset//activity_labels.txt")
 cn <- read.table("UCI HAR Dataset//features.txt")
 colnames(test_y) <- "activity"
 colnames(test_s) <- "subject"
